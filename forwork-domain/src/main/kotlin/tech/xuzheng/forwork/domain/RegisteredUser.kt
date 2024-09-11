@@ -1,17 +1,15 @@
 package tech.xuzheng.forwork.domain
 
-import org.babyfish.jimmer.sql.Entity
-import org.babyfish.jimmer.sql.Id
-import org.babyfish.jimmer.sql.Key
+import org.babyfish.jimmer.sql.*
+import org.babyfish.jimmer.sql.meta.UUIDIdGenerator
 
 @Entity
-interface RegisteredUser {
-    @Id
-    val id: Long
+interface RegisteredUser : Persistent {
 
     @Key
     val username: String
 
-    @Key
     val password: String
 }
+
+
